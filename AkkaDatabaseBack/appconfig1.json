@@ -1,0 +1,30 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "AkkaConfiguration": {
+    "akka": {
+      "actor": {
+        "provider": "cluster"
+      },
+      "remote": {
+        "dot-netty": {
+          "tcp": {
+            "port": 8085,
+            "hostname": "localhost"
+          }
+        }
+      },
+      "cluster": {
+        "seed-nodes": [ "akka.tcp://TestAkktors@localhost:8085" ],
+        "roles": [ "myService" ],
+        "min-nr-of-members": 3,
+        "log-info-verbose": "on"
+      }
+    }
+  }
+}

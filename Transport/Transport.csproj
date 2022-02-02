@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Akka" Version="1.4.*" />
+    <PackageReference Include="Akka.Cluster" Version="1.4.*" />
+    <PackageReference Include="Akka.DependencyInjection" Version="1.4.*" />
+    <PackageReference Include="Akka.Remote" Version="1.4.*" />
+    <PackageReference Include="Confluent.Kafka" Version="1.8.*" />
+    <PackageReference Include="Confluent.Kafka.FactoryExtension" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.*" />
+    <PackageReference Include="Polly" Version="7.2.*" />
+    <PackageReference Include="Akka.Streams" Version="1.4.*" />
+    <PackageReference Include="Akka.Streams.Kafka" Version="1.2.*" />
+    <PackageReference Include="Confluent.Kafka" Version="1.8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+{
+  "AkkaConfiguration": {
+    "akka": {
+      "actor": {
+        "provider": "cluster"
+      },
+      "remote": {
+        "dot-netty": {
+          "tcp": {
+            "port": 8082,
+            "hostname": "localhost"
+          }
+        }
+      },
+      "cluster": {
+        "seed-nodes": [ "akka.tcp://TestAkktors@localhost:8081", "akka.tcp://TestAkktors@localhost:8082" ],
+        "roles": [ "myService" ],
+        "min-nr-of-members": 3,
+        "log-info-verbose" : "on"
+      }
+    }
+  }
+}

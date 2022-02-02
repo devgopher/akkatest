@@ -1,0 +1,22 @@
+{
+  "AkkaConfiguration": {
+    "akka": {
+      "actor": {
+        "provider": "Akka.Remote.RemoteActorRefProvider, Akka.Remote",
+        "deployment": {
+          "/remoteecho": {
+            "remote": "akka.tcp://TestAkktor@localhost:8081"
+          }
+        } 
+      },
+      "remote": {
+        "dot-netty": {
+          "tcp": {
+            "port": 0,
+            "hostname": "localhost"
+          }
+        }
+      }
+    }
+  }
+}
